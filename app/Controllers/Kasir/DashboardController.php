@@ -12,6 +12,6 @@ class DashboardController extends BaseController
             'title' => 'Dashboard',
         ];
 
-        return view('kasir/dashboard/index', $data);
+        return view('Kasir/dashboard/index', $data);
     }
 }

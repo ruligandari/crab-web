@@ -13,7 +13,7 @@ class TransaksiController extends BaseController
             'title' => 'Transaksi'
         ];
 
-        return view('kasir/transaksi/index', $data);
+        return view('Kasir/transaksi/index', $data);
     }
     public function detail($id)
     {

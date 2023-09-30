@@ -14,13 +14,12 @@ class ListPesananController extends BaseController
             'listpesanan' => $listPesanan->findAll()
         ];
 
-        return view('chef/list-pesanan/index', $data);
-
+        return view('Chef/list-pesanan/index', $data);
     }
 
     public function detail($s1, $s2, $s3)
     {
-        $noOrder = $s1.'/'.$s2.'/'.$s3;
+        $noOrder = $s1 . '/' . $s2 . '/' . $s3;
         $listPesanan = new \App\Models\TransaksiModel();
         $no_order = $listPesanan->getTransaksi($noOrder);
         $data = [
@@ -28,6 +27,6 @@ class ListPesananController extends BaseController
             'listpesanan' => $no_order,
         ];
 
-        return view('chef/list-pesanan/detail', $data);
+        return view('Chef/list-pesanan/detail', $data);
     }
 }
